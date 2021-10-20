@@ -1,0 +1,48 @@
+import numpy as np
+import pandas as pd
+import matplotlib as mpl
+import matplotlib.pyplot as plt
+import seaborn as sns 
+from __future__ import print_function 
+%matplotlib inline 
+
+dataset = pd.read_csv('C:/Users/miant/Desktop/Python/hotel_booking.csv') 
+dataset.head()
+
+#Check the number of observations and variables
+count = dataset.count
+count
+
+#MISSING VALUES
+
+#Detect whether there are missing values
+dataset.isnull().values.any()
+
+#MISSING VALUES
+#Check how many missing values per column
+dataset.isnull().sum()
+
+#MISSING VALUES
+
+#Calculate the proportion of missing values
+#percent_missing = df.isnull().sum() * 100 / len(df)
+#missing_value_df = pd.DataFrame({'column_name': df.columns,
+                                 #'percent_missing': percent_missing})
+percent_missing = dataset.isnull().sum() * 100 / len(dataset) 
+percent_missing
+
+#MISSING VALUES 
+
+#Drop company 
+dataset.drop(columns =['company'], inplace = True)
+
+#Check if the column was dropped
+
+columns = list(dataset.columns)
+columns
+
+#MISSING VALUES 
+
+#Drop the rows with missing values
+
+dataset.dropna()
