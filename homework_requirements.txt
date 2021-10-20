@@ -1,0 +1,11 @@
+Homework
+You will work with the dataset called “Australia.xlsx”. You are required to:
+1) Create a line plot that compares immigration from Argentina and Brazil; another one that compares
+France and Italy; another one that compares China and Japan; Canada and the US.
+2) Create a pie chart that shows the immigration per continent.
+3) Create an area plot with the greatest immigration to Australia.
+4) Create a bar chart that shows the immigration from Colombia.
+5) Create a scatter plot that shows the immigration from Ireland.
+6) Create a box plot comparison between Guatemala and Panama.
+7) Create a bubble plot that compares immigration between Syria and Lebanon.
+8) Create a histogram of your choice.
