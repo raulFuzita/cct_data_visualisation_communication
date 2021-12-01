@@ -7,6 +7,6 @@ setup(name='DataAnalyticsTools',
       description='Python Distribution Utilities for Data Analytics',
       author='Raul Macedo Fuzita',
       author_email='raul.fuzita@gmail.com',
-      packages=['data_analytics'],
-      package_dir={'data_analytics': 'src/data_analytics'}
+      packages=['data_analytics_tools'],
+      package_dir={'data_analytics_tools': 'src/data_analytics_tools'}
 )
