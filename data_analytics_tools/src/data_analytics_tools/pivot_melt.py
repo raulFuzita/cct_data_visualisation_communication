@@ -5,7 +5,7 @@ import numpy as np
 # Date: 01/12/2021
 # All rights reserved
 def pivot_melt(data, column, value, fill=0, filter=None):
-  if (type(filter) is list) & (len(filter) > 0):
+  if (type(filter) is list) | (type(filter) is np.ndarray) & (len(filter) > 0):
     data = data[np.isin(data, filter)]
   colnames = data.loc[:,column].unique()
   newdf = pd.DataFrame()
