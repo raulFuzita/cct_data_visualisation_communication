@@ -44,5 +44,8 @@ class Dictionary(dict):
         self.__dict__[v] = self.__dict__[temp[i]]
         del self.__dict__[temp[i]]
 
+    def __getitem__(self, arg):
+      return self.__dict__[arg]
+
     def clear(self):
       self.__dict__.clear()
