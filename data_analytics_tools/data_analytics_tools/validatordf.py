@@ -4,9 +4,7 @@ import numpy as np
 # Author: Raul Macedo Fuzita
 # Date: 07/12/2021
 # All rights reserved
-def checkDF(dfname, df, types=None, size=0):
-
-  print(type(types))
+def checkDF(dfname, df, types=None, size=0, negative=True):
 
   print(dfname+'\n')
   xsize = len(df.columns)
@@ -33,7 +31,7 @@ def checkDF(dfname, df, types=None, size=0):
   if df.isnull().values.any(): # Check if there is any NaN value
     issue = True
     print('❌ (Missing Values)')
-  if df.iloc[:,-1:].values.any() < 0: # Check if there is any negative value
+  if (not negative) & (df.iloc[:,-1:].values.any() < 0): # Check if there is any negative value
     issue = True
     print('❌ (Negative)')
   if not issue: # If there is no issue
