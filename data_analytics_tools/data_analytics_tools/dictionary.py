@@ -1,3 +1,4 @@
+
 class Dictionary(dict):
 
     __getattr__= dict.__getitem__
@@ -46,6 +47,12 @@ class Dictionary(dict):
 
     def __getitem__(self, arg):
       return self.__dict__[arg]
+
+    def keys(self):
+      return self.__dict__.keys()
+
+    def values(self):
+      return self.__dict__.values()
 
     def clear(self):
       self.__dict__.clear()
